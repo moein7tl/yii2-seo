@@ -22,7 +22,6 @@ class m161018_065431_create_seo_table extends Migration
             'metaTags'      =>  $this->text()
         ]);
 
-        $this->createIndex('seo_entity_and_entity_id', '{{%seo}}',['entity', 'entity_id']);
     }
 
     /**

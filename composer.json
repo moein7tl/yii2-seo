@@ -21,21 +21,21 @@
             "moein7tl\\yii2SEO\\": "src/"
         }
     },
-    "minimum-stability": "dev",  "scripts":  {
-
-    "post-package-install": [
-        "@runMigrations"
-    ],
-    "post-package-update":  [
-        "@runMigrations"
-    ],
-    "pre-package-uninstall":  [
-        "@rollbackMigrations"
-    ],
-    "post-autoload-dump": [
-        "@runMigrations"
-    ],
-    "runMigrations":  "php ./../../yii migrate/up --interactive --migrationPath=@app/vendor/moein7tl/yii2-seo/src/migrations",
-    "rollbackMigrations": "php ./../../yii migrate/down 2 --interactive --migrationPath=@app/vendor/moein7tl/yii2-seo/src/migrations"
-
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-package-install": [
+            "@runMigrations"
+        ],
+        "post-package-update": [
+            "@runMigrations"
+        ],
+        "pre-package-uninstall": [
+            "@rollbackMigrations"
+        ],
+        "post-autoload-dump": [
+            "@runMigrations"
+        ],
+        "runMigrations": "php ./../../yii migrate/up --interactive --migrationPath=@app/vendor/moein7tl/yii2-seo/src/migrations",
+        "rollbackMigrations": "php ./../../yii migrate/down 2 --interactive --migrationPath=@app/vendor/moein7tl/yii2-seo/src/migrations"
+    }
 }

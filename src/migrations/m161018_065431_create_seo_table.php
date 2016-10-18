@@ -19,7 +19,7 @@ class m161018_065431_create_seo_table extends Migration
             'title'         =>  $this->text(),
             'keywords'      =>  $this->text(),
             'description'   =>  $this->text(),
-            'metaTags'      =>  $this->text()
+            'meta_tags'     =>  $this->text()
         ]);
 
     }

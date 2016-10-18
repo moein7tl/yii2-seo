@@ -13,7 +13,7 @@ use Yii;
  * @property string $title
  * @property string $keywords
  * @property string $description
- * @property string $meta
+ * @property string $meta_tags
  */
 class Seo extends \yii\db\ActiveRecord
 {
@@ -31,7 +31,7 @@ class Seo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['entity', 'entity_id','title', 'keywords', 'description', 'meta'], 'string'],
+            [['entity', 'entity_id','title', 'keywords', 'description', 'meta_tags'], 'string'],
         ];
     }
 
@@ -42,12 +42,12 @@ class Seo extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'entity'    =>  'Entity',
-            'entity_id' =>  'Entity ID',
-            'title' => 'Title',
-            'keywords' => 'Keywords',
-            'description' => 'Description',
-            'meta' => 'Meta',
+            'entity'        =>  'Entity',
+            'entity_id'     =>  'Entity ID',
+            'title'         =>  'Title',
+            'keywords'      =>  'Keywords',
+            'description'   =>  'Description',
+            'meta_tags'     =>  'Meta Tags',
         ];
     }
 }

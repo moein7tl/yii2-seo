@@ -54,8 +54,8 @@ class SeoBehavior extends Behavior {
      */
     public function afterInsertOrUpdate($event)
     {
-        $model  =   $this->getModel();
-        $model->load(Yii::$app->request->post());
+        $model              =   $this->getModel();
+        $model->attributes  =   $_REQUEST;
         $model->save();
     }
 

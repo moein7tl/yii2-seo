@@ -34,8 +34,8 @@ class Seo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['entity', 'entity_id','seo_title', 'seo_keywords', 'seo_description', 'seo_meta_tags'], 'string'],
-            [['seo_keywords' , 'seo_description', 'seo_meta_tags'], 'string', 'on' => self::SCENARIO_TEMPORARY_VALIDATION]
+            [['!entity', '!entity_id','seo_title', 'seo_keywords', 'seo_description', 'seo_meta_tags'], 'string'],
+            [['seo_keywords' , 'seo_description', 'seo_meta_tags'], 'string', 'on' => self::SCENARIO_TEMPORARY_VALIDATION],
         ];
     }
 

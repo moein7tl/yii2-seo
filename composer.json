@@ -36,6 +36,9 @@
             "@runMigrations"
         ],
         "runMigrations": "php ./../../../yii migrate --migrationPath=@app/vendor/moein7tl/yii2-seo/src/migrations",
-        "rollbackMigrations": "php ./../../../yii migrate/down --migrationPath=@app/vendor/moein7tl/yii2-seo/src/migrations"
+        "rollbackMigrations": [
+            "php ./../../../yii migrate/mark 161018_065431 --migrationPath=@app/vendor/moein7tl/yii2-seo/src/migrations",
+            "php ./../../../yii migrate/down --migrationPath=@app/vendor/moein7tl/yii2-seo/src/migrations"
+        ]
     }
 }

@@ -13,13 +13,13 @@ class m161018_065431_create_seo_table extends Migration
     public function up()
     {
         $this->createTable('{{%seo}}', [
-            'id'            =>  $this->primaryKey(),
-            'entity'        =>  $this->text(),
-            'entity_id'     =>  $this->text(),
-            'title'         =>  $this->text(),
-            'keywords'      =>  $this->text(),
-            'description'   =>  $this->text(),
-            'meta_tags'     =>  $this->text()
+            'id'                =>  $this->primaryKey(),
+            'entity'            =>  $this->text(),
+            'entity_id'         =>  $this->text(),
+            'seo_title'         =>  $this->text(),
+            'seo_keywords'      =>  $this->text(),
+            'seo_description'   =>  $this->text(),
+            'seo_meta_tags'     =>  $this->text()
         ]);
 
     }

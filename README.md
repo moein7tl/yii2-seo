@@ -32,4 +32,5 @@ class Post extends ActiveRecord
             ]
         ];
     }
+}
 ```

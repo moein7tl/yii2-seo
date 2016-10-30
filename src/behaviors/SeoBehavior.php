@@ -46,10 +46,12 @@ class SeoBehavior extends Behavior {
         $model  =   new Seo();
         $model->setScenario(Seo::SCENARIO_TEMPORARY_VALIDATION);
 
-        if (Yii::$app->request->isPost) {
-            $model->load(Yii::$app->request->post());
-        } else if (Yii::$app->request->isGet) {
-            $model->load(Yii::$app->request->get());
+        if (Yii::$app instanceof \yii\web\Application){
+            if (Yii::$app->request->isPost) {
+                $model->load(Yii::$app->request->post());
+            } else if (Yii::$app->request->isGet) {
+                $model->load(Yii::$app->request->get());
+            }
         }
 
         $event->isValid =   $model->validate();
